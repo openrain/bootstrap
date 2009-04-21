@@ -1,0 +1,15 @@
+# TODO Make this work.
+
+desc "Setup core"
+task "setup-core" do
+  `sh 00-core.sh`
+  `sh 10-misc.sh`
+end  
+
+desc "Setup Ruby & Rubygems"
+task "setup-ruby" => ["setup-core"] do
+  `sh 05-ruby.sh`
+end
+
+desc "Setup everything"
+task "setup-all" => ["setup-core", "setup-ruby"]

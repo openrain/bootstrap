@@ -1,1 +1,5 @@
 These are not the scripts you're looking for
+
+But in the event that they are:
+
+ 1. Configure the default and root authorized key files in /config/
