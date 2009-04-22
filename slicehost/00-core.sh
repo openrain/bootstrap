@@ -27,7 +27,7 @@ echo "Copying authorized_keys"
 echo
 
 # TODO Use relative paths instead of absolute. dirname? pwd? 
-cp ~/hosting/config/root_authorized_keys ~/.ssh/authorized_keys
+cp ~/bootstrap/config/root_authorized_keys ~/.ssh/authorized_keys
 
 echo
 echo "For security reasons, you must manually set a password for the 'admin' user."
