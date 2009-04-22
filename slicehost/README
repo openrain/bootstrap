@@ -4,6 +4,31 @@ apt-get update -y
 apt-get autoremove
 apt-get install git-core
 git clone git://github.com/openrain/bootstrap.git
-cd hosting/slicehost
-sh 00-core.sh 
+cd bootstrap/slicehost/
+sh ./00-core.sh
+
 ...
+
+or something like this:
+
+apt-get update -y
+apt-get autoremove
+apt-get install git-core -y
+git clone git://github.com/openrain/bootstrap.git
+cd bootstrap/slicehost/
+sh ./00-core.sh
+sh ./05-ruby.sh
+sh ./10-misc.sh
+
+PGPASSWORD='clark_kent_is_superman' sh ./15-postgresql.sh
+cat > /tmp/postgres.sql <<EOF
+CREATE ROLE db_user
+  LOGIN ENCRYPTED PASSWORD 'batman_is_bruce_wayne'
+  INHERIT CREATEDB;
+EOF
+sudo su postgres -c psql template1 < /tmp/postgres.sql
+rm /tmp/postgres.sql
+
+sh ./25-apache.sh
+sh ./36-passenger.sh
+sh ./40-rails-apps.sh
