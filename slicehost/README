@@ -30,5 +30,5 @@ sudo su postgres -c psql template1 < /tmp/postgres.sql
 rm /tmp/postgres.sql
 
 sh ./25-apache.sh
-sh ./36-passenger.sh
+SERVERNAME=example.com sh ./36-passenger.sh
 sh ./40-rails-apps.sh
