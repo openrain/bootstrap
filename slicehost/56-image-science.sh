@@ -10,5 +10,5 @@ apt-get install -y libfreeimage-dev libfreeimage3
 
 if [ -e "`which gem`" ]
 then
-  gem install image_science
+  gem install image_science xml-simple builder mime-types
 fi
