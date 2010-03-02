@@ -15,7 +15,7 @@ fi
 
 apt-get update -y
 
-PG_VER=8.3
+PG_VER=8.4
 PGCONFDIR=/etc/postgresql/$PG_VER/main/
 
 apt-get install -y postgresql-$PG_VER postgresql-server-dev-$PG_VER postgresql-contrib-$PG_VER 
@@ -36,7 +36,7 @@ hostssl all     all     68.104.179.220/32       md5 \n\
 hostssl all     all     70.162.73.19/32       md5 \n\
 # o \n\
 hostssl all     all     64.32.165.26/32       md5 \n\
-" >> /etc/postgresql/8.3/main/pg_hba.conf
+" >> /etc/postgresql/$PG_VER/main/pg_hba.conf
 
 # restart to load changes
 pg_ctlcluster $PG_VER main restart
