@@ -8,7 +8,7 @@
 
 apt-get update -y
 
-MY_VER=5.0
+MY_VER=5.1
 
 apt-get install -y mysql-server-$MY_VER mysql-client-$MY_VER libmysqlclient15-dev
 
