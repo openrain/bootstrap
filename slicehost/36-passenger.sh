@@ -5,7 +5,7 @@
 # Also adds a user called "app" that your Rails application runs as
 #
 
-PASSENGER_VER=2.2.10
+PASSENGER_VER=2.2.11
 
 if [ ! -n "$SERVERNAME" ]
 then 
